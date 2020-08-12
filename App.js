@@ -4,14 +4,18 @@ import IndexScreen from './src/screens/IndexScreen';
 
 const navigator = createStackNavigator(
   {
-    IndexScreen: IndexScreen
+    Index: IndexScreen,
   },
   {
-    initialRouteName: 'IndexScreen',
+    initialRouteName: 'Index',
     defaultNavigationOptions: {
-      title: 'Business Search',
+      title: 'Blogs',
     },
   }
 );
 
-export default createAppContainer(navigator);
+const App = createAppContainer(navigator);
+
+export default () => {
+  return <App />;
+};
